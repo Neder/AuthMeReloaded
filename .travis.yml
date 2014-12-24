@@ -4,3 +4,8 @@ jdk:
 script: 
   - "mvn clean install"
   - "ls /home/travis/build/Neder/AuthMeReloaded"
+  
+after_success:
+  - "tar -cvzf AuthMe_${TRAVIS_JOB_NUMBER}_Returns.tar.gz ./target/*"
+  - "sudo chmod 777 ./upload.sh"
+  - "./upload.sh"
