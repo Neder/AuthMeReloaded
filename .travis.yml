@@ -1,4 +1,6 @@
 language: java
 jdk:
   - openjdk6
-script: "mvn clean install"
+script: 
+  - "mvn clean install"
+  - "ls /home/travis/build/Neder/AuthMeReloaded"
